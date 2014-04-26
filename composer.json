@@ -1,0 +1,24 @@
+{
+    "name": "zolli/hCityGrabber",
+    "author": "Zolli",
+    "description": "PHP based city grabber from Hungarian cityes",
+    "keywords": ["city", "grab", "http", "hungary"],
+    "license": "MIT",
+    "require": {
+        "guzzle/guzzle": "3.8.*@dev",
+        "paquettg/php-html-parser": "dev-master",
+        "doctrine/dbal": "2.5.*@dev"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "hCityGrabber\\": "src/hCityGrabber"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev"
+}
