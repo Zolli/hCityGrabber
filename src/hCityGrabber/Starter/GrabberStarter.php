@@ -121,13 +121,13 @@ class GrabberStarter {
             if(StringUtils::contains($row->innerHtml, "Népsűrűség")) {
                 $p = new Dom();
                 $p->load($row->innerHtml);
-                $cityDetails["population_density"] = str_replace(",", "", explode(" ", $p->find("td")[1]->innerHtml)[0]);
+                $cityDetails["population_density"] = floatval( str_replace(",", ".", explode(" ", $p->find("td")[1]->innerHtml)[0]) );
             }
 
             if(StringUtils::contains($row->innerHtml, "Terület")) {
                 $p = new Dom();
                 $p->load($row->innerHtml);
-                $cityDetails["area"] = str_replace(",", "", explode(" ", $p->find("td")[1]->innerHtml)[0]);
+                $cityDetails["area"] = floatval( str_replace(",", ".", explode(" ", $p->find("td")[1]->innerHtml)[0]) );
             }
 
             if(StringUtils::contains($row->innerHtml, "é. sz.")) {
